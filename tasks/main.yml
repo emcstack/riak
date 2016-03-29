@@ -1,0 +1,9 @@
+---
+# tasks file for riak
+
+
+- name: Install packages
+  include: packages_el.yml
+  when: (ansible_os_family == "CentOS") or
+        (ansible_os_family == "RedHat")
+  become: yes

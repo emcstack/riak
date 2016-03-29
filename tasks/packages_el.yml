@@ -1,0 +1,12 @@
+---
+# pre-requesites for EL
+
+- name: Install Riak repositories
+  script: script.rpm.sh
+  tags:
+  - packages
+
+- name: Install Riak
+  yum: name=riak state=latest
+  tags:
+  - packages
